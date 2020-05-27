@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
-	before_action :authenticate_user!, except: :index
-  
+		before_action :authenticate_user!, except: :index
+
   def index
-  	@events = Event.order_by_created_at
+  		@events = Event.order_by_created_at
   end
 end
