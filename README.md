@@ -5,20 +5,35 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version 2.6.6
 
-* System dependencies
+* Ruby on Rails 6.0.3.1
 
-* Configuration
+1.  Get the code. Clone this git repository and check out the latest release:
 
-* Database creation
+    ```bash
+    git clone git@github.com:kapilchoudhary/eventmanagement.git
+    cd eventmanagement
 
-* Database initialization
+2.  Install the required gems by running the following command in the project root directory:
+    ```bash
+    bundle install
 
-* How to run the test suite
+3.  Create a database by running the command
+    ```bash
+    rails db:Create
 
-* Services (job queues, cache servers, search engines, etc.)
+4.  Run database migration by following command
+    ```bash
+    rails db:migrate
 
-* Deployment instructions
+5.  Run seed file by the command.
+    ```bash
+    rails db:seed
 
-* ...
+6.  Now Run the server by following command
+
+    rails s 
+
+    Goto the browser and run visit following link
+    http://localhost:3000/
