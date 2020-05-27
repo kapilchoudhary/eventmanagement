@@ -1,23 +1,35 @@
-<% if @event.event_date >= Date.today %>
-	<% if @event.users.include?(current_user) %>
-		<%= link_to "Unattend", unattend_event_path(@event), method: :delete %>
-	<% else %>
-	<%= link_to "attend", attend_event_path(@event),  method: :post %>
-	<% end %>
-<% end %>
-
-<table border="" align="center">
-	<tr>
-		<th colspan="2"><%= @event.name %></th>
-	</tr>
-	<tr>
-		<th>Member Name</th>
-		<th>Gender</th>
-	</tr>
-	<% @event.users.each do |user| %>
-	<tr>
-		<td><%= user.name %></td>
-		<td><%= user.gender %></td>
-	</tr>
-	<% end %>
-</table>
+<div class="container">
+	<div class="row">
+		<div class="col-md-3">
+			<% if @event.event_date >= Date.today %>
+				<% if @event.users.include?(current_user) %>
+					<%= link_to "Unattend", unattend_event_path(@event), method: :delete, class: "btn btn-danger" %>
+				<% else %>
+				<%= link_to "attend", attend_event_path(@event),  method: :post, class: "btn btn-primary" %>
+				<% end %>
+			<% end %>	
+		</div>
+		<div class="col-md-9">
+			<table class="table">
+			  <caption>List of users</caption>
+			  <thead>
+			  	<tr>
+						<th colspan="2"><%= @event.name %></th>
+					</tr>
+			    <tr>
+			      <th scope="col">Member Name</th>
+			      <th scope="col">Gender</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <% @event.users.each do |user| %>
+						<tr>
+							<td><%= user.name %></td>
+							<td><%= user.gender %></td>
+						</tr>
+						<% end %>
+			  </tbody>
+			</table>
+		</div>
+	</div>
+</div>
