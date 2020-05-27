@@ -1,23 +1,23 @@
 <div class="container">
-	<div class="row">
-		<div class="col-md-9">
-			<table class="table">
-			  <caption>List of events</caption>
-			  <thead>
-			    <tr>
-			      <th scope="col">Event Name</th>
-			      <th scope="col">Action</th>
-			    </tr>
-			  </thead>
-			  <tbody>
-			    <% @events.each do |event| %>
-						<tr>
-							<td><%= event.name %></td>
-							<td><%= link_to "view", event_path(event) %></td>
-						</tr>
-					<% end %>
-			  </tbody>
-			</table>
-		</div>
-	</div>
+  <div class="row">
+    <div class="col-md-9">
+      <table class="table">
+        <caption>List of events</caption>
+        <thead>
+          <tr>
+            <th scope="col">Event Name</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+	<tbody>
+          <% @events.each do |event| %>
+            <tr>
+              <td><%= event.name %></td>
+              <td><%= link_to "view", event_path(event) %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>

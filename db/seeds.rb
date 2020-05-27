@@ -7,12 +7,12 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 User.create!(name: 'Nancy', email: 'nancy@example.com', gender: 'female', password: 'Test@123')
 (1..3).each do |event_number|
-  Event.create!(name: "Past Event #{event_number}", event_date: Date.yesterday)
+  Event.create!(name: "Past Event #{event_number}", event_date: Date.yesterday, ticket_fee: 500)
 end
 (1..3).each do |event_number|
-  Event.create!(name: "Current Event #{event_number}", event_date: Date.today)
+  Event.create!(name: "Current Event #{event_number}", event_date: Date.today, ticket_fee: 500)
 end
 (1..3).each do |event_number|
-  Event.create!(name: "Future Event #{event_number}", event_date: Date.tomorrow)
+  Event.create!(name: "Future Event #{event_number}", event_date: Date.tomorrow, ticket_fee: 500)
 end
 
