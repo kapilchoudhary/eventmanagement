@@ -37,3 +37,8 @@ Things you may want to cover:
 
     Goto the browser and run visit following link
     http://localhost:3000/
+
+7.  Run Test cases by following command
+    ```bash
+    rails test '../path_to_file'
+    Example;- rails test test/controllers/home_controller_test.rb
